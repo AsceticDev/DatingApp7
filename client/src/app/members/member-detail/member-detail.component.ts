@@ -12,6 +12,7 @@ import { MembersService } from 'src/app/_services/members.service';
 export class MemberDetailComponent implements OnInit {
   member: Member | undefined;
   galleryOptions: NgxGalleryOptions[] = [];
+  lastActive: Date | undefined;
   galleryImages: NgxGalleryImage[] = [];
 
   constructor(private memberService: MembersService, private route: ActivatedRoute) { }
@@ -52,6 +53,7 @@ export class MemberDetailComponent implements OnInit {
       next: member => {
         this.member = member;
         this.galleryImages = this.getImages();
+        this.lastActive = new Date(member.lastActive);
       }
     })
   }
