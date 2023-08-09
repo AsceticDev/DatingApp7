@@ -1,5 +1,5 @@
 import { Directive, Input, OnInit, TemplateRef, ViewContainerRef } from '@angular/core';
-import { User } from '../_models/User';
+import { User } from '../_models/user';
 import { AccountService } from '../_services/account.service';
 import { NgxGalleryThumbnailsComponent } from '@kolkov/ngx-gallery';
 import { take } from 'rxjs';
