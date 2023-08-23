@@ -1,0 +1,23 @@
+# fly.toml app configuration file generated for polished-frog-6214 on 2023-08-15T00:04:20-04:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "polished-frog-6214"
+primary_region = "yul"
+
+[build]
+  image = "panguins/datingapp:latest"
+
+[env]
+  ASPNETCORE_URL="http://+:8080"
+  CloudinarySettings__CloudName="dpfuecwdp"
+  CloudinarySettings__ApiKey="895156437665183"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]
