@@ -10,7 +10,7 @@ primary_region = "yul"
   image = "panguins/datingapp:latest"
 
 [env]
-  ASPNETCORE_URL="http://+:8080"
+  ASPNETCORE_URLS="http://+:8080"
   CloudinarySettings__CloudName="dpfuecwdp"
   CloudinarySettings__ApiKey="895156437665183"
 
