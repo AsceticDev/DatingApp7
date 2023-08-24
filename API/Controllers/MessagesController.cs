@@ -91,3 +91,18 @@ namespace API.Controllers
         }
     }
 }
+
+
+
+
+
+public class Journal
+{
+    private readonly List<string> entires = new List<string>();
+    private static int count = 0;
+    public int AddEntry(string text)
+    {
+        entires.Add($"{++count}:");
+        return count;
+    }
+}
